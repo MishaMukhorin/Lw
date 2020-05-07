@@ -17,8 +17,8 @@ BEGIN
       ELSE
         Count := Length(S) - 5;
       Name := Copy(S, 6, Count)
+      WRITELN('Hello dear, ', Name, '!')
     END
   ELSE
-    Name := 'Anonymous';
-  WRITELN('Hello ', Name, '!')
+    WRITELN('Hello Annonymous!')
 END.

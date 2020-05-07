@@ -10,9 +10,11 @@ BEGIN {SarahRevere}
 
   IF Lanterns <> ''
   THEN
-    IF Lanterns[10] < '3'
+    IF Lanterns[10] > '0'
     THEN
-      WRITE('The British are coming by ');
+      IF Lanterns[10] < '3'
+      THEN
+        WRITE('The British are coming by ');
   IF Lanterns[10] = '1'
   THEN
     WRITELN('land.')
