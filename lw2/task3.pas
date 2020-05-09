@@ -16,7 +16,7 @@ BEGIN
         Count := INTEGER(Pos('&', S)) - 6
       ELSE
         Count := Length(S) - 5;
-      Name := Copy(S, 6, Count)
+      Name := Copy(S, 6, Count);
       WRITELN('Hello dear, ', Name, '!')
     END
   ELSE
