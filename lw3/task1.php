@@ -1,24 +1,45 @@
 <?php
 
 header('Content-Type: text/plain');
-$S = $_GET['text'];
+$textParam = $_GET['text'];
 $A = "0";
-for ($i = 1; $i <= strlen($S); $i++) {    
-    IF ($A <> "0") 
+if ($textParam == "") 
+{
+ echo "no text parameter";
+}
+else
+{
+ for ($i = 0; $i <= strlen($textParam); $i++) 
+  {    
+    if ($A <> "0") 
+     {
       $Ch1 = $Ch;
-    $Ch = $S[$i];
-    IF ($A == '0')
+     }
+    $Ch = $textParam[$i];
+    if ($A == '0')
+     {
       $A = '1';
-    IF ($A == '1') 
-    while ($Ch == ' ') {
-      $Ch = $S[$i];
-      $i++;
-    }
+     }
+    if ($A == '1')
+   { 
+    while ($Ch == ' ') 
+    {
+      $Ch = $textParam[$i];
+      ++$i;
+      if ($Ch <> ' ') 
+       {
+        echo $Ch;
+       } 
+    } 
+   }
     $A = '2';
-    IF (($Ch1 == ' ') && ($Ch <> ' ')) {
+    if (($Ch1 == ' ') && ($Ch <> ' ')) {
       echo ' ';
       echo $Ch;
-}
-    IF (($Ch1 <> ' ') && ($Ch <> ' '))
+  } 
+    if (($Ch1 <> ' ') && ($Ch <> ' '))
+     {
       echo($Ch);
-};
+     }
+  }
+}

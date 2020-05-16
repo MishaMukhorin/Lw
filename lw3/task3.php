@@ -1,7 +1,7 @@
 <?php
 
 header('Content-Type: text/plain');
-$S = $_GET['text'];
+$textParam = $_GET['text'];
 function LetterL($L){
   return in_array($L, array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
                          'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 
@@ -17,7 +17,7 @@ function Digit($D){
 }
 $chars = array();
 $CD = 0;
-$Len = strlen($S);
+$Len = strlen($textParam);
 $CLB = 0;
 $CLL = 0;
 $CR = 0;
@@ -25,24 +25,48 @@ $Cr1 = 0;
 $fL = 1;
 $fD = 1;
 $Safety = 0;
-  for ($i = 0; $i < strlen($S); $i++) {     
+  for ($i = 0; $i < $Len; $i++) 
+   {     
     $Ch = $S[$i]; 
-    IF (LetterL($Ch)) $CLL++;
-    IF (LetterB($Ch)) $CLB++;
-    IF (Digit($Ch)) $CD++;
-    IF (!Digit($Ch)) $fD = 0;
-    IF (!LetterL($Ch) && !LetterB($Ch)) $fL = 0;
-    IF (!in_array($Ch, $chars)) {
-       $chars[] = $Ch;
-       for ($j = 0; $j < strlen($S); $j++) {
+    if (LetterL($Ch)) 
+     {
+      $CLL++;
+     }
+    if (LetterB($Ch)) 
+     {
+      $CLB++;
+     }
+    if (Digit($Ch)) 
+     {
+      $CD++;
+     }
+    if (!Digit($Ch)) 
+     {
+      $fD = 0;
+     }
+    if (!LetterL($Ch) && !LetterB($Ch)) 
+     {
+      $fL = 0;
+     }
+    if (!in_array($Ch, $chars)) 
+      {
+      $chars[] = $Ch;
+      for ($j = 0; $j < strlen($S); $j++) 
+        {
          $Ch1 = $S[$j];
          IF ($Ch1 == $Ch) $Cr1++;           
+        } 
       } 
-   }
     IF ($Cr1 > 1) $CR += $Cr1;
     $Cr1 = 0;
 };          
 $Safety = $Safety + 4 * $Len + 4 * $CD + 2 * ($Len - $CLB) + 2 * ($Len - $CLL) - $CR;
-IF ($fD) $Safety = $Safety - $CD;
-IF ($fL) $Safety = $Safety - $CLL - $CLB;                  
+if ($fD) 
+ {
+  $Safety = $Safety - $CD;
+ }
+if ($fL) 
+ {
+  $Safety = $Safety - $CLL - $CLB;                  
+ }
 echo $Safety;
