@@ -2,17 +2,17 @@
 
 header('Content-Type: text/plain');
 $textParam = $_GET['text'];
-function LetterL($L){
+function isLetterL($L){
   return in_array($L, array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
                          'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 
                          'w', 'x', 'y', 'z')); 
 }
-function LetterB($B){
+function isLetterB($B){
   return in_array($B, array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 
                          'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 
                          'W', 'X', 'Y', 'Z'));
 }
-function Digit($D){
+function isDigit($D){
   return in_array($D, array('1', '2', '3', '4', '5', '6', '7', '8', '9', '0')); 
 }
 $chars = array();
@@ -28,23 +28,23 @@ $Safety = 0;
   for ($i = 0; $i < $Len; $i++) 
    {     
     $Ch = $S[$i]; 
-    if (LetterL($Ch)) 
+    if (isLetterL($Ch)) 
      {
       $CLL++;
      }
-    if (LetterB($Ch)) 
+    if (isLetterB($Ch)) 
      {
       $CLB++;
      }
-    if (Digit($Ch)) 
+    if (isDigit($Ch)) 
      {
       $CD++;
      }
-    if (!Digit($Ch)) 
+    if (!isDigit($Ch)) 
      {
       $fD = 0;
      }
-    if (!LetterL($Ch) && !LetterB($Ch)) 
+    if (!isLetterL($Ch) && !isLetterB($Ch)) 
      {
       $fL = 0;
      }
