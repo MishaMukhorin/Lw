@@ -2,44 +2,44 @@
 
 header('Content-Type: text/plain');
 $textParam = $_GET['text'];
-$A = "0";
+$flag = "0";
 if ($textParam == "") 
 {
- echo "no text parameter";
+    echo "no text parameter";
 }
 else
 {
- for ($i = 0; $i <= strlen($textParam); $i++) 
-  {    
-    if ($A <> "0") 
-     {
-      $Ch1 = $Ch;
-     }
-    $Ch = $textParam[$i];
-    if ($A == '0')
-     {
-      $A = '1';
-     }
-    if ($A == '1')
-   { 
-    while ($Ch == ' ') 
-    {
-      $Ch = $textParam[$i];
-      ++$i;
-      if ($Ch <> ' ') 
-       {
-        echo $Ch;
-       } 
-    } 
-   }
-    $A = '2';
-    if (($Ch1 == ' ') && ($Ch <> ' ')) {
-      echo ' ';
-      echo $Ch;
-  } 
-    if (($Ch1 <> ' ') && ($Ch <> ' '))
-     {
-      echo($Ch);
-     }
-  }
+    for ($i = 0; $i <= strlen($textParam); $i++) 
+    {    
+        if ($flag <> "0") 
+        {
+            $char1 = $char;
+        }
+        else
+        {
+            $char1 = 'a';
+        }
+        $char = $textParam[$i];
+        if ($flag == '0')
+        {
+            $flag = '1';
+        }
+        if ($flag == '1')
+        { 
+            while ($textParam[$i] == ' ') 
+            {
+                ++$i;
+            }
+            $char = $textParam[$i];  
+        }
+        $flag = '2';
+        if (($char1 == ' ') && ($char <> ' ')) 
+        {
+            echo " " . $char;
+        } 
+        if (($char1 <> ' ') && ($char <> ' '))
+        {
+            echo($char);
+        }
+    }
 }
