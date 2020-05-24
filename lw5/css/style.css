@@ -1,0 +1,231 @@
+body {
+margin: 0;
+padding: 0;
+border: 0;	
+}
+.top-menu {
+	margin: 0;
+	padding: 0;
+}
+.top-menu-list {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	margin-left: 480px;
+	height: 50px;
+	width: 514px;
+}
+.background-photo {
+	position: absolute;
+	top: 50px;
+}
+.top-menu-item { 
+    background: #FFFFFF; 
+    display: inline; 
+    font-size: 19px; 
+    line-height: 32px; 
+    color: #333333; 
+    font-family: "Georgia"; 
+} 
+.menu-link { 
+    text-decoration: none; 
+    background-size: 16px; 
+    line-height: 50px; 
+    display: inline-block; 
+    padding-right: 28px; 
+    padding-left: 28px; 
+    color: #464646; 
+} 
+.menu-link:hover { 
+    background-color: #15a98c; 
+    color: #ffffff; 
+}
+.icon-person { 
+    background: url(../images/about_me_icon_b.png) no-repeat 5px center;
+} 
+.icon-heart { 
+    background: url(../images/hobby_icon_b.png) no-repeat 5px center; 
+} 
+.icon-camera { 
+    background: url(../images/video_icon_b.png) no-repeat 5px center; 
+} 
+.icon-person:hover { 
+    background: url(../images/about_me_icon_w.png) no-repeat 5px center;
+    background-color: #15a98c; 
+    color: #ffffff; 
+} 
+.icon-heart:hover { 
+    background: url(../images/hobby_icon_w.png) no-repeat 5px center; 
+    background-color: #15a98c; 
+    color: #ffffff; 
+} 
+.icon-camera:hover { 
+    background: url(../images/video_icon_w.png) no-repeat 5px center; 
+    background-color: #15a98c; 
+    color: #ffffff; 
+} 
+.main-photo {
+	left: 480px;
+	top: 259px;
+    height: 351px;
+    width: 330px;    
+	position: absolute;
+}
+.quote {
+	left: 813px;
+	top: 245px;
+	margin-left: 58px;
+	position: absolute;
+}
+
+.quote-big { 
+	width: 566px;
+	font-size: 28px;
+	line-height: 42px;
+	color: #ffffff;
+	font-family: "Georgia";
+	font-style: italic;
+}
+
+.quote-sub {
+	font-size: 16px;
+	line-height: 42px;
+	color: #f5f5f5;
+	font-family: "Open Sans";
+	font-weight: 600;
+}
+.sidebar {
+	margin-top: 212px;
+	margin-left: 480px;
+}
+.sidebar-h4 {
+	font-family: "Open Sans";
+	color: #15a98c;
+}
+.sidebar-list-item {
+	font-family: "Georgia";
+	color: #555555;
+}
+.main-text {
+	position: absolute;
+	top: 500px;
+	left: 869px;
+	width: 555px;
+	height: 637px;
+}
+.main-text-header{
+    font-family: "Open Sans";
+    font-size: 48px;
+    font-style: bold;
+    color: #333333;
+}
+.main-text-para-1 {
+    width: 561px;
+    height: 178px;
+    font-size: 19px;
+    line-height: 32px;
+    color: #333333;
+    font-family: "Georgia";
+}
+.main-text-para-2 {
+    width: 562px;
+    height: 146px;
+    font-size: 19px;
+    line-height: 32px;
+    color: #555555;
+    font-family: "Georgia";
+}
+.main-text-h4 {
+    font-size: 36px;
+    line-height: 42px;
+    color: #333333;
+    font-family: "Open Sans";
+    font-weight: 400;
+}
+.green-round-rectangle {
+    width: 60px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #45c3aa;
+}
+.text-me {
+    width: 562px;
+    height: 263px;
+    font-size: 19px;
+    line-height: 32px;
+    color: #15a98b;
+    font-family: "Georgia";
+}
+a.text-me:hover {
+    width: 562px;
+    height: 263px;
+    font-size: 19px;
+    line-height: 32px;
+    color: #098d72;
+    font-family: "Georgia";
+}
+.filmes {
+    font-size: 36px;
+    line-height: 42px;
+    color: #333333;
+    font-family: "Open Sans";
+    font-weight: 400;
+    position: absolute;
+    top: 1242px;
+    left: 360px;
+}
+.film-table {
+    position: absolute;
+    top: 1309px;
+    left: 360px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+.table-item {
+    width: 278px;
+    text-align: left;
+    vertical-align: text-top;
+    width: 285px;
+    font-size: 16px;
+    line-height: 28px;
+    color: #555555;
+    font-family: "Georgia";
+}
+.film-text {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.film-name {
+    margin-top: 8px;
+    margin-bottom: 4px;
+    font-size: 22px;
+    line-height: 32px;
+    color: #333333;
+    font-family: "Open Sans";
+    font-weight: 700;
+}
+.all-movies-button {
+    margin-top: 1110px;
+    margin-left: 840px;
+    width: 220px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #15a98c;
+}
+.all-movies-button:hover {
+    margin-top: 1110px;
+    margin-left: 840px;
+    width: 220px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #098d71;
+}
+.all-movies-text {
+    padding-left: 55px;
+    margin-top: 10px;
+    display: inline-block; 
+    font-size: 19px;
+    line-height: 32px;
+    color: #f5f5f5;
+    font-family: "Georgia";
+}
