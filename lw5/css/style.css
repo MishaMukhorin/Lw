@@ -101,9 +101,12 @@ border: 0;
 .sidebar-h4 {
 	font-family: "Open Sans";
 	color: #15a98c;
+    margin-bottom: 0px;
 }
 .sidebar-list-item {
+    padding-left: 0px;
 	font-family: "Georgia";
+    line-height: 25px;
 	color: #555555;
 }
 .main-text {
@@ -152,9 +155,14 @@ border: 0;
     width: 562px;
     height: 263px;
     font-size: 19px;
-    line-height: 32px;
+    line-height: 32px; 
     color: #15a98b;
+    text-decoration: none;
     font-family: "Georgia";
+}
+.text-me-marker {
+    border-bottom: 1px solid #15a98b;
+    color: #15a98b; 
 }
 a.text-me:hover {
     width: 562px;
@@ -234,7 +242,7 @@ a.text-me:hover {
     height: 70px;
     width: 1920px;
     position: absolute;
-    top: 2100px;
+    top: 2195px;
 }
 .footer-text {
     display: inline-block; 
