@@ -1,0 +1,6 @@
+
+    name: misha,
+    email: 123456789@icloud.com,
+    place: Россия,
+    gender: Мужской,
+    message: abcdefghijklnmop

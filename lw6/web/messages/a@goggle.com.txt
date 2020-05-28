@@ -1,0 +1,6 @@
+
+    name: misha mukhorin,
+    email: a@goggle.com,
+    place: Россия,
+    gender: Мужской,
+    message: я миша
